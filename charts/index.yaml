@@ -3,7 +3,7 @@ entries:
   alpine:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2026-01-13T10:24:37.14068931+08:00"
+    created: "2026-01-13T16:40:55.624293012+08:00"
     description: A Helm chart for Kubernetes
     digest: 8f3b49dc2f4834c56cc91409d127bd64217f9de9fe3b4bcc605895167c9b0d51
     name: alpine
@@ -11,10 +11,21 @@ entries:
     urls:
     - alpine-0.1.0.tgz
     version: 0.1.0
+  apache:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-01-13T16:40:55.624599087+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 7921ab1e3168c84c5fe651c0505a9e0701de33de715a03da6225a708fe26c2bb
+    name: apache
+    type: application
+    urls:
+    - apache-0.1.0.tgz
+    version: 0.1.0
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2026-01-13T10:24:37.141047842+08:00"
+    created: "2026-01-13T16:40:55.624876628+08:00"
     description: A Helm chart for Kubernetes
     digest: b72f8822b4bfd64a95e0d90596ebd524c2f581adfbc0ab2a89a46c981b2472f9
     name: nginx
@@ -22,4 +33,4 @@ entries:
     urls:
     - nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2026-01-13T10:24:37.14020362+08:00"
+generated: "2026-01-13T16:40:55.623837327+08:00"
