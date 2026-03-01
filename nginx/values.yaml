@@ -9,6 +9,10 @@ service:
   type: ClusterIP
   port: 80
 
+serviceAccount:
+  create: false   # prevents Helm from trying to create a ServiceAccount
+  name: ""        # optional, leave empty if you don't need a custom SA
+
 ingress:
   enabled: false
   className: ""
