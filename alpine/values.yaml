@@ -5,24 +5,13 @@ image:
   tag: "3.20"
   pullPolicy: IfNotPresent
 
-service:
-  type: ClusterIP
-  port: 80
+# Keep container alive
+command:
+  - /bin/sh
+  - -c
 
-ingress:
-  enabled: false
-  className: ""
-  annotations: {}
-  hosts:
-    - host: alpine.local
-      paths:
-        - path: /
-          pathType: Prefix
-  tls: []
+args:
+  - while true; do sleep 3600; done
 
 resources: {}
-
-# Optional command / args to keep container alive
-command: ["/bin/sh", "-c"]
-args: ["while true; do sleep 3600; done"]
 

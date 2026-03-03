@@ -8,17 +8,19 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "alpine.name" . }}
+      app.kubernetes.io/name: "{{ include "alpine.name" . }}"
+      app.kubernetes.io/instance: "{{ .Release.Name }}"
   template:
     metadata:
       labels:
-        app: {{ include "alpine.name" . }}
+        app.kubernetes.io/name: "{{ include "alpine.name" . }}"
+        app.kubernetes.io/instance: "{{ .Release.Name }}"
     spec:
       containers:
         - name: alpine
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          stdin: true          # <-- tty + interactive support
+          stdin: true
           tty: true
           command: {{ toJson .Values.command }}
           args: {{ toJson .Values.args }}
