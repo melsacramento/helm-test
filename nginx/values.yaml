@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: asdsadsa
+  repository: nginx
   tag: "1.25-alpine"
   pullPolicy: IfNotPresent
 
