@@ -6,10 +6,10 @@ metadata:
     {{- include "alpine2.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
-  selector:
-    app: {{ include "alpine2.name" . }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 80
+      targetPort: http
       protocol: TCP
       name: http
+  selector:
+    {{- include "alpine2.selectorLabels" . | nindent 4 }}
