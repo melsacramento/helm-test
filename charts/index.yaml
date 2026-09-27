@@ -3,7 +3,7 @@ entries:
   alpine:
   - apiVersion: v2
     appVersion: "3.20"
-    created: "2026-09-28T11:32:56.802333348+13:00"
+    created: "2026-09-28T10:29:36.188296345+13:00"
     description: Minimal interactive Alpine container
     digest: 66e335136a96023ca42630c5c972a453ac28a0f8553727d9c4c67524484777aa
     name: alpine
@@ -14,18 +14,18 @@ entries:
   alpine2:
   - apiVersion: v2
     appVersion: "3.20"
-    created: "2026-09-28T11:32:56.802684171+13:00"
+    created: "2026-09-28T10:29:36.188590226+13:00"
     description: Minimal Alpine container with Service/Ingress
-    digest: 771af66fc5a507f26cd326e28e58018ee49370ff74260a22c19ee1bcf7d74675
+    digest: 4fafb318df6a7a9ca265e6a86cb0f42796372d688fd1a45338174268dc18d81f
     name: alpine2
     type: application
     urls:
-    - alpine2-0.2.1.tgz
-    version: 0.2.1
+    - alpine2-0.2.0.tgz
+    version: 0.2.0
   apache:
   - apiVersion: v2
     appVersion: "2.4"
-    created: "2026-09-28T11:32:56.803397258+13:00"
+    created: "2026-09-28T10:29:36.18931206+13:00"
     description: Apache HTTP Server (httpd)
     digest: c0df0e42cb780b462d2145908c9337a92401b750b88875b60a4e4e793ad34128
     name: apache
@@ -36,7 +36,7 @@ entries:
   nats:
   - apiVersion: v2
     appVersion: "2.10"
-    created: "2026-09-28T11:32:56.803602464+13:00"
+    created: "2026-09-28T10:29:36.189532403+13:00"
     description: Minimal NATS server
     digest: a9c15d05a6b0124d62b07247eb90794c70522b1c256ffc0526eaf8264d5cee35
     name: nats
@@ -47,7 +47,7 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: "1.25"
-    created: "2026-09-28T11:32:56.803944501+13:00"
+    created: "2026-09-28T10:29:36.189817418+13:00"
     description: A simple NGINX Helm chart
     digest: 67696efb7ab94bc5447f5173249ea776eca17c9d595d3bfb3fd12c81e2c1b81c
     name: nginx
@@ -55,4 +55,4 @@ entries:
     urls:
     - nginx-0.2.0.tgz
     version: 0.2.0
-generated: "2026-09-28T11:32:56.801887351+13:00"
+generated: "2026-09-28T10:29:36.187805624+13:00"
