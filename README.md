@@ -15,3 +15,7 @@ cd charts
 helm repo index .
 
 --make commit and push--
+
+--plain manifests (for UIs that apply raw Kubernetes YAML from git)--
+manifests/<chart>.yaml are pre-rendered from each chart. Regenerate after chart changes:
+for c in alpine alpine2 apache nats nginx; do helm template helm-test ./$c --skip-tests > manifests/$c.yaml; done

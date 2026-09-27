@@ -1,0 +1,34 @@
+---
+# Source: alpine/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-test-alpine
+  labels:
+    helm.sh/chart: "alpine-0.2.0"
+    app.kubernetes.io/name: "alpine"
+    app.kubernetes.io/instance: "helm-test"
+    app.kubernetes.io/version: "3.20"
+    app.kubernetes.io/managed-by: "Helm"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "alpine"
+      app.kubernetes.io/instance: "helm-test"
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: "alpine"
+        app.kubernetes.io/instance: "helm-test"
+    spec:
+      containers:
+        - name: alpine
+          image: "alpine:3.20"
+          imagePullPolicy: IfNotPresent
+          stdin: true
+          tty: true
+          command: ["/bin/sh","-c"]
+          args: ["while true; do sleep 3600; done"]
+          resources:
+            {}

@@ -1,0 +1,81 @@
+---
+# Source: apache/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: helm-test-apache
+  labels:
+    helm.sh/chart: apache-0.2.0
+    app.kubernetes.io/name: apache
+    app.kubernetes.io/instance: helm-test
+    app.kubernetes.io/version: "2.4"
+    app.kubernetes.io/managed-by: Helm
+automountServiceAccountToken: true
+
+---
+# Source: apache/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: helm-test-apache
+  labels:
+    helm.sh/chart: apache-0.2.0
+    app.kubernetes.io/name: apache
+    app.kubernetes.io/instance: helm-test
+    app.kubernetes.io/version: "2.4"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: apache
+    app.kubernetes.io/instance: helm-test
+
+---
+# Source: apache/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-test-apache
+  labels:
+    helm.sh/chart: apache-0.2.0
+    app.kubernetes.io/name: apache
+    app.kubernetes.io/instance: helm-test
+    app.kubernetes.io/version: "2.4"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: apache
+      app.kubernetes.io/instance: helm-test
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: apache-0.2.0
+        app.kubernetes.io/name: apache
+        app.kubernetes.io/instance: helm-test
+        app.kubernetes.io/version: "2.4"
+        app.kubernetes.io/managed-by: Helm
+    spec:
+      serviceAccountName: helm-test-apache
+      containers:
+        - name: apache
+          image: "httpd:2.4"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
