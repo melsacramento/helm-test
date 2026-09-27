@@ -2,57 +2,57 @@ apiVersion: v1
 entries:
   alpine:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2026-03-05T15:42:26.774401398+13:00"
-    description: A Helm chart for Kubernetes
-    digest: 8f3b49dc2f4834c56cc91409d127bd64217f9de9fe3b4bcc605895167c9b0d51
+    appVersion: "3.20"
+    created: "2026-09-28T10:29:36.188296345+13:00"
+    description: Minimal interactive Alpine container
+    digest: 66e335136a96023ca42630c5c972a453ac28a0f8553727d9c4c67524484777aa
     name: alpine
     type: application
     urls:
-    - alpine-0.1.0.tgz
-    version: 0.1.0
+    - alpine-0.2.0.tgz
+    version: 0.2.0
   alpine2:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2026-03-05T15:42:26.77554977+13:00"
-    description: A Helm chart for Kubernetes
-    digest: 211f5e3d295e1ddadbea2f60709352a8caed1904a9374e6c816154c34cd91a7a
+    appVersion: "3.20"
+    created: "2026-09-28T10:29:36.188590226+13:00"
+    description: Minimal Alpine container with Service/Ingress
+    digest: 4fafb318df6a7a9ca265e6a86cb0f42796372d688fd1a45338174268dc18d81f
     name: alpine2
     type: application
     urls:
-    - alpine2-0.1.0.tgz
-    version: 0.1.0
+    - alpine2-0.2.0.tgz
+    version: 0.2.0
   apache:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2026-03-05T15:42:26.776313283+13:00"
-    description: A Helm chart for Kubernetes
-    digest: 7921ab1e3168c84c5fe651c0505a9e0701de33de715a03da6225a708fe26c2bb
+    appVersion: "2.4"
+    created: "2026-09-28T10:29:36.18931206+13:00"
+    description: Apache HTTP Server (httpd)
+    digest: c0df0e42cb780b462d2145908c9337a92401b750b88875b60a4e4e793ad34128
     name: apache
     type: application
     urls:
-    - apache-0.1.0.tgz
-    version: 0.1.0
+    - apache-0.2.0.tgz
+    version: 0.2.0
   nats:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2026-03-05T15:42:26.77660101+13:00"
-    description: A Helm chart for Kubernetes
-    digest: 9484ef1fcc3876fe25ac2b5d4137198265fae5d96e6c9bc9e4c91ed5f8999259
+    appVersion: "2.10"
+    created: "2026-09-28T10:29:36.189532403+13:00"
+    description: Minimal NATS server
+    digest: a9c15d05a6b0124d62b07247eb90794c70522b1c256ffc0526eaf8264d5cee35
     name: nats
     type: application
     urls:
-    - nats-0.1.0.tgz
-    version: 0.1.0
+    - nats-0.2.0.tgz
+    version: 0.2.0
   nginx:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2026-03-05T15:42:26.776881383+13:00"
-    description: A Helm chart for Kubernetes
-    digest: b72f8822b4bfd64a95e0d90596ebd524c2f581adfbc0ab2a89a46c981b2472f9
+    appVersion: "1.25"
+    created: "2026-09-28T10:29:36.189817418+13:00"
+    description: A simple NGINX Helm chart
+    digest: 67696efb7ab94bc5447f5173249ea776eca17c9d595d3bfb3fd12c81e2c1b81c
     name: nginx
     type: application
     urls:
-    - nginx-0.1.0.tgz
-    version: 0.1.0
-generated: "2026-03-05T15:42:26.773950948+13:00"
+    - nginx-0.2.0.tgz
+    version: 0.2.0
+generated: "2026-09-28T10:29:36.187805624+13:00"
